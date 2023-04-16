@@ -1,7 +1,7 @@
 #project
 venv
 .idea
-telegram_base.py
+telegram_base.db
 
 
 # Byte-compiled / optimized / DLL files
