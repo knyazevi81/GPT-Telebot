@@ -3,12 +3,13 @@ import config
 
 
 def main():
-    connect = sqlite3.connect('telegram_base.bd')
+    connect = sqlite3.connect('telegram_base.db')
     cursor = connect.cursor()
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS all_profiles(
     id INTEGER PRIMARY KEY,
     profile_id INTEGER,
+    profile_username TEXT,
     activity TEXT,
     super_user TEXT
     )
@@ -26,6 +27,14 @@ def main():
     CREATE TABLE IF NOT EXISTS all_ai_tokens(
     id_token INTEGER PRIMARY KEY,
     token_num TEXT
+    )
+    ''')
+
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS all_questions(
+    id INTEGER PRIMARY KEY,
+    id_username TEXT,
+    question TEXT
     )
     ''')
 
