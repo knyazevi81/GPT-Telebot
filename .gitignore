@@ -1,3 +1,9 @@
+#project
+venv
+.idea
+telegram_base.py
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
